@@ -125,7 +125,11 @@ const fdfcmDinner = filterDataForCurrentMonth.filter( i => i.slot === "D")
       },
    };
     
-
+   const handleCloseDateGraph = e => {
+      if(e.target.classList.contains("close")){
+         setOpen(false)
+      }
+   }
 
   return (<>
     <div className={style.graph__container}>
@@ -140,7 +144,7 @@ const fdfcmDinner = filterDataForCurrentMonth.filter( i => i.slot === "D")
     <motion.section 
     initial={{opacity:0}}
     animate={open? {opacity:1}:{ display:"none"}}
-    className={` ${style.date__graph}`}>
+    className={`close ${style.date__graph}`} onClick={(e) => handleCloseDateGraph(e)}>
       <motion.div animate={open? {x:0}:{x:"-100vw"}}>
          <div>
             <p>9am - 12pm</p>

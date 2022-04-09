@@ -1,14 +1,19 @@
 @use "../styles/mixins&vars" as m;
 
 .nav__container {
-   width: 30vw;
+  width: 100%;
    position:  relative;
-   z-index: 10;
+  
    height: 100%;
    overflow: hidden;
    border-right: 2px solid lightgray;
    background-color: white;
-   min-height: 100vh;
+   
+   @include m.desktop{
+      width: 30vw;
+      min-height: 100vh;
+      z-index: 10;
+   }
 }
 .nav__selected__date {
    border-top: 1px solid lightgray;
