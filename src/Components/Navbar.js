@@ -22,7 +22,7 @@ export default function Navbar({handleDateGraph , length, date, setDate}) {
         maxDate={new Date(2022, 1, 1)} />
 
         <div className={style.nav__selected__date}>
-          <p>Showing graph for </p>
+          <p>Showing graph for {month} {date.getFullYear()}</p>
             <button onClick={() => handleDateGraph()}><p>{date.getDate()} {month} {date.getFullYear()}</p></button>
             <p>data count: {length}</p>
         </div>

@@ -5,20 +5,20 @@ import { motion } from 'framer-motion'
 
 export default function Graph({open, setOpen, handleDataGraph, date, data}) {
    //sheduled dates 
-   const sheduledDates = data.map(i => {
-      let newDate = new Date(i.schedule_time)
-      return `${newDate.getDate()}-${newDate.getMonth()}-${newDate.getFullYear()}`
-      //return newDate
-   })
+   // const sheduledDates = data.map(i => {
+   //    let newDate = new Date(i.schedule_time)
+   //    return `${newDate.getDate()}-${newDate.getMonth()}-${newDate.getFullYear()}`
+   //    //return newDate
+   // })
 
   //console.log(data)
    const selectedNewDate = `${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`
    //console.log()
 
   //find similer shedules 
-  const similerSheduleDate = sheduledDates.filter( i => 
-   i === selectedNewDate
-  )
+//   const similerSheduleDate = sheduledDates.filter( i => 
+//    i === selectedNewDate
+//   )
    //filter data an data and get the matched data with the current selected data 
    const filterDataForCurrentDate =data.filter( i =>
       {
@@ -29,8 +29,8 @@ export default function Graph({open, setOpen, handleDataGraph, date, data}) {
    )
 
    //Lunch , Dinner data current date
-   const fdfcdLunch = filterDataForCurrentDate.filter(i => i.slot==="L")
-   const fdfcdDinner = filterDataForCurrentDate.filter(i => i.slot==="D")
+   // const fdfcdLunch = filterDataForCurrentDate.filter(i => i.slot==="L")
+   // const fdfcdDinner = filterDataForCurrentDate.filter(i => i.slot==="D")
 // console.log("Date ld:" , fdfcdLunch, fdfcdDinner)
 console.log("filter",filterDataForCurrentDate)
 // console.log("sss",similerSheduleDate)
