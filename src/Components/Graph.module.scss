@@ -1,0 +1,55 @@
+@use "../styles/mixins&vars" as mv;
+.graph__container {
+   width: 100%;
+   height: 100%;
+   border: 1rem solid white;
+   box-shadow: 0px 0px 0px 5px inset;
+}
+.date__graph {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,.5);
+
+   > div {
+      margin-left: 30%;
+      background-color: white;
+      width: 30%;
+      height: 100%;
+      box-shadow: 10px 0px 10px rgba(0,0,0,.1);
+      @include mv.flex_column;
+      padding: 2rem 2rem;
+      > div {
+         flex-basis: 15%;
+         border-bottom: 1px solid lightgray;
+         @include mv.flex_row;
+         margin-bottom: 1rem;
+         > p {
+            letter-spacing: .1rem;
+            opacity: .6;
+            font-weight: bold;
+            padding: 1rem;
+            width: 100%;
+            display: block;
+            color: red;
+            @include mv.flex_column;
+            @include mv.flex_center;
+         }
+         > div {
+            background-color: rgba(0,0,0,.05);
+            width: 100%;
+            color: black;
+            @include mv.flex_column;
+            @include mv.flex_center;
+            > p {
+               font-weight: bold;
+               text-transform: uppercase;
+               opacity: .5;
+            }
+         }
+         
+      }  
+   }
+}

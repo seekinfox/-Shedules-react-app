@@ -1,0 +1,33 @@
+@use "./styles/mixins&vars" as m;
+.App {
+   width: 100%;
+   @include m.flex_row;
+   > section {
+      width: 100%;
+      @include m.flex_column;
+      @include m.flex_center;
+   }
+}
+.App__dataIncbuttons {
+   position: fixed;
+   bottom: 1rem;
+   left: 1rem;
+   @include m.flex_row;
+   > button {
+      width: 2.5rem;
+      height: 2.3rem; 
+      border: none;
+      background-color: black;
+      color: white;
+      font-size: .7em;
+      margin: 0 .5rem;
+   cursor: pointer;
+   transition: .1s ease;
+   
+   &:hover {
+      filter: brightness(80%);
+      transform: scale(.9);
+   }
+   
+}
+}

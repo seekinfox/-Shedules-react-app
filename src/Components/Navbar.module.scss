@@ -1,0 +1,37 @@
+@use "../styles/mixins&vars" as m;
+
+.nav__container {
+   width: 30vw;
+   position:  relative;
+   z-index: 10;
+   height: 100%;
+   overflow: hidden;
+   border-right: 2px solid lightgray;
+   background-color: white;
+   min-height: 100vh;
+}
+.nav__selected__date {
+   border-top: 1px solid lightgray;
+   padding: 1rem 2rem;
+   line-height: 2;
+   color: black;
+   > p {
+      font-weight: bold;
+      opacity: .5;
+      text-transform: uppercase;
+   }
+
+  > button {
+     margin: 1rem 0;
+     border: 1px solid lightgray;
+     padding: .5rem;
+     width: 100%;
+     cursor: pointer;
+     >  p {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+      opacity: .7;
+   }
+  }
+}
